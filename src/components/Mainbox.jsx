@@ -82,14 +82,14 @@ const Mainbox = () => {
             
             <p className={"text-clip".concat(todo.iscompleted ?" line-through": "")}>{todo.tasktext}</p>
             <div className="ml-auto inline">
-            <button ref={editbtn} className="bg-yellow-400 p-1 rounded-lg sm:m-0 sm:p-0" onClick={(e)=>handlechangeedit(e,todo.id)}><FaRegEdit /></button>
-            <button className="bg-red-500 p-1 m-1 rounded-lg sm:m-0 sm:p-0" onClick={(e)=>handlechangedelete(e,todo.id)}><FaRegTrashCan /></button>
+            <button ref={editbtn} className="bg-yellow-400  m-2 p-2 rounded-lg " onClick={(e)=>handlechangeedit(e,todo.id)}><FaRegEdit /></button>
+            <button className="bg-red-500  m-2 p-2 rounded-lg " onClick={(e)=>handlechangedelete(e,todo.id)}><FaRegTrashCan /></button>
             </div>
             </div>));
           else
           return ((!todo.iscompleted)&&(<div key={todo.id}  className={"mx-8  mt-4 px-4 sm:m-2 sm:p-1 font-bold font-mono bg-purple-400 rounded-xl  flex items-center text-left break-words"}><input type='checkbox' checked={todo.iscompleted} name={todo.id} className="mx-2" onChange={handlecheckboxchange}></input>
             
-            <p className={"text-clip ".concat(todo.iscompleted ?" line-through": "")}>{todo.tasktext}</p>
+            <p className={"text-clip".concat(todo.iscompleted ?" line-through": "")}>{todo.tasktext}</p>
             <div className="ml-auto inline">
             <button ref={editbtn} className="bg-yellow-400  m-2 p-2 rounded-lg " onClick={(e)=>handlechangeedit(e,todo.id)}><FaRegEdit /></button>
             <button className="bg-red-500  m-2 p-2 rounded-lg " onClick={(e)=>handlechangedelete(e,todo.id)}><FaRegTrashCan /></button>
